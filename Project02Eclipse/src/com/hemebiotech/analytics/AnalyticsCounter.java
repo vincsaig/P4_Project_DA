@@ -1,6 +1,7 @@
 package com.hemebiotech.analytics;
 
 import java.util.Scanner;
+import java.util.List;
 
 public class AnalyticsCounter {
 	public static void main(String args[]) throws Exception {
@@ -15,7 +16,7 @@ public class AnalyticsCounter {
 
 		ReadSymptomDataFromFile rSymptomsFromFile = new ReadSymptomDataFromFile(filename);
 
-
+		List<String> listOfSymptoms = rSymptomsFromFile.GetSymptoms();
 		// next generate output
 		/*FileWriter writer = new FileWriter ("result.out");
 		writer.write("headache: " + headacheCount + "\n");
