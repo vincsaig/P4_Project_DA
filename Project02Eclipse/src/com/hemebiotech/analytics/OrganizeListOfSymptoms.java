@@ -15,7 +15,9 @@ public class OrganizeListOfSymptoms implements ListOrganizer{
             symptomsAndNumberOfOccurences.put(symptom,Collections.frequency(rawListOfSymptoms, symptom));
         }
 
+        //Using a TreeMap to organize all the elements in alphabetical order
         TreeMap<String, Integer> sortedSymptoms = new TreeMap<>();
+        sortedSymptoms.putAll(symptomsAndNumberOfOccurences);
         return sortedSymptoms;
 }
 }
