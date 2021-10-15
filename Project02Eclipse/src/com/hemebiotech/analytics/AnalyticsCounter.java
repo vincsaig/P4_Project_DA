@@ -28,12 +28,5 @@ public class AnalyticsCounter {
 
 		//Will tell the user wether the file creation process was successful or not
 		System.out.print(outputText);
-		
-		// next generate output
-		/*FileWriter writer = new FileWriter ("result.out");
-		writer.write("headache: " + headacheCount + "\n");
-		writer.write("rash: " + rashCount + "\n");
-		writer.write("dialated pupils: " + pupilCount + "\n");
-		writer.close();*/
 	}
 }

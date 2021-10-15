@@ -13,7 +13,7 @@ public class WriteToOutputFile implements OSymptomWriter{
         if(!organizedListOfSymptoms.isEmpty()){
             try(FileWriter oFile = new FileWriter("result.out")){
                 for(Entry<String, Integer> wLine : organizedListOfSymptoms.entrySet()){
-                    oFile.write(wLine.getKey() + " : " + wLine.getValue());
+                    oFile.write(wLine.getKey() + " : " + wLine.getValue() + "\n");
                 }
                 oFile.close();
                 return "File was generated successfully";
