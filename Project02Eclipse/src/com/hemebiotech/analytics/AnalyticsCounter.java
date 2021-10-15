@@ -19,8 +19,15 @@ public class AnalyticsCounter {
 		List<String> listOfSymptoms = rSymptomsFromFile.GetSymptoms();
 		
 		//Remove duplicates from the raw list of symptoms
-		OrganizeListOfSymptoms Organizer = new OrganizeListOfSymptoms();
-		TreeMap<String, Integer> sortedSymptoms = Organizer.organizeListOfSymptoms(listOfSymptoms);
+		OrganizeListOfSymptoms organizer = new OrganizeListOfSymptoms();
+		TreeMap<String, Integer> sortedSymptoms = organizer.organizeListOfSymptoms(listOfSymptoms);
+		
+		//Generate output file
+		WriteToOutputFile fileWriter = new WriteToOutputFile();
+		String outputText = fileWriter.writerToOutputFile(sortedSymptoms);
+
+		//Will tell the user wether the file creation process was successful or not
+		System.out.print(outputText);
 		
 		// next generate output
 		/*FileWriter writer = new FileWriter ("result.out");
