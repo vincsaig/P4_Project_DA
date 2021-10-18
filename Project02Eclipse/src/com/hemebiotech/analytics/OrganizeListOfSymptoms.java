@@ -7,8 +7,8 @@ public class OrganizeListOfSymptoms implements ListOrganizer{
 
     @Override
     public TreeMap<String, Integer> organizeListOfSymptoms(List<String> rawListOfSymptoms){
-        //Using a HashMap to remove any duplicates found in the
-        //given List
+        //Using a Treemap to remove any duplicates and organize 
+        //the symptoms found in the given List
 
         TreeMap<String, Integer> sortedSymptoms = new TreeMap<>();
         for(String symptom : rawListOfSymptoms){
