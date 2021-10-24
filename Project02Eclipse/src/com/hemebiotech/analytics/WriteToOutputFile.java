@@ -10,7 +10,7 @@ public class WriteToOutputFile implements OSymptomWriter{
     @Override
     public String writerToOutputFile(TreeMap<String,Integer> organizedListOfSymptoms){
         //Try to create/edit a file, if the list is empty or the file
-        //creation fails, send an error
+        //creation/edition fail, return an error
         if(!organizedListOfSymptoms.isEmpty()){
             try(FileWriter oFile = new FileWriter("result.out")){
                 for(Entry<String, Integer> wLine : organizedListOfSymptoms.entrySet()){
