@@ -18,9 +18,7 @@ public class WriteToOutputFile implements OSymptomWriter{
                 }
                 oFile.close();
                 return "File was generated successfully";
-
             }   
-
             catch(IOException e){
                 return "File was not generated successfully";
             }
