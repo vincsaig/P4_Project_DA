@@ -15,5 +15,5 @@ public class OrganizeListOfSymptoms implements ListOrganizer{
             sortedSymptoms.put(symptom,Collections.frequency(rawListOfSymptoms, symptom));
         }
         return sortedSymptoms;
-}
+    }
 }
