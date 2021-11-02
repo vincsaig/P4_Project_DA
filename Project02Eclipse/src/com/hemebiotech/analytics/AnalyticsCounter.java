@@ -28,5 +28,7 @@ public class AnalyticsCounter {
 
 		//Will tell the user wether the file creation process was successful or not
 		System.out.print(outputText);
+
+		//P4
 	}
 }
